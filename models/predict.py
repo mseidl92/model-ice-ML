@@ -138,7 +138,7 @@ def predict_cnn(image: np.ndarray, pixel_size: float, thickness: float) -> tuple
         raise ValueError('image must be a 128x128 array')
 
     # load models
-    added_mass_0 = CNNModel(512)
+    added_mass_0 = CNNModel(1024)
     added_mass_0.load_state_dict(
         torch.load('./models/model_added_mass_0_wave_frequency_cnn.pth',
                    map_location=torch.device('cpu'),
